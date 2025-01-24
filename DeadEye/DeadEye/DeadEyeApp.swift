@@ -11,7 +11,7 @@ import SwiftUI
 struct DeadEyeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScreenSplashView()
         }
     }
 }

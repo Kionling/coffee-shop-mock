@@ -2,16 +2,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    init() {
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor.white.withAlphaComponent(0.8)
-        
-        UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().scrollEdgeAppearance = appearance
-        
-    }
-    
+
     var body: some View {
         TabView {
             MenuView()

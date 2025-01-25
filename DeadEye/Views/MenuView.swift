@@ -10,26 +10,20 @@ import SwiftUI
 
 struct MenuView: View {
     @StateObject private var viewModel = MenuViewModel()
-
     var body: some View {
-        NavigationView {
-            List(viewModel.menu) { coffee in
-                VStack(alignment: .leading) {
-                    Text(coffee.name)
-                        .font(.headline)
-                    Text(coffee.description)
-                        .font(.subheadline)
-                    Text("$\(coffee.price, specifier: "%.2f")")
-                        .font(.footnote)
+        NavigationView{
+            TabView {
+                ForEach(viewModel.menu) { coffee in
+                    CoffeeCardView(coffee: coffee)
                 }
-                .padding()
             }
-            .navigationTitle("Coffee Menu")
+            .tabViewStyle(.page) // Carousel effect
+            .indexViewStyle(.page(backgroundDisplayMode: .always)) // Dots below the carousel
+            .frame(height: 400) // Adjust the carousel height
+            .navigationTitle("Menu")
         }
     }
 }
-
-
 #Preview {
     MenuView()
 }

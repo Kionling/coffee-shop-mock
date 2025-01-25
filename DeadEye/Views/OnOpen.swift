@@ -19,7 +19,6 @@ struct OnOpen: View {
             }
         }
         .onAppear {
-            // Simulate a delay for the splash screen (e.g., 2 seconds)
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation {
                     isSplashActive = false

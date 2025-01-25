@@ -28,15 +28,10 @@ struct ScreenSplashView: View {
                     .foregroundColor(.brown)
             }
         }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation {
-                    isActive = true
-                }
-            }
-        }
-        .fullScreenCover(isPresented: $isActive){
-            MenuView()
-        }
     }
+}
+
+
+#Preview {
+    ScreenSplashView()
 }

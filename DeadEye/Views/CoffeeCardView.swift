@@ -15,6 +15,7 @@ struct CoffeeCardView: View {
         ZStack {
             Color.white // Background color for each card
                 .cornerRadius(20)
+                .shadow(radius: 5)
             
             VStack(spacing: 10) {
                 Image(systemName: "cup.and.saucer.fill")
@@ -22,6 +23,7 @@ struct CoffeeCardView: View {
                     .scaledToFit()
                     .frame(width: 150, height: 150)
                     .cornerRadius(10)
+                    
                 
                 Text(coffee.name)
                     .font(.title2)
@@ -34,11 +36,10 @@ struct CoffeeCardView: View {
                 
                 Text("$\(coffee.price, specifier: "%.2f")")
                     .font(.headline)
-                    .foregroundColor(.green)
             }
             .padding()
         }
-        .frame(width: 300, height: 350) // Adjust card size
+        .frame(width: 300, height: 470) 
     }
 }
 

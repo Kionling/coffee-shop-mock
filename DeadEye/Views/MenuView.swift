@@ -8,8 +8,12 @@
 
 import SwiftUI
 
+
 struct MenuView: View {
     @StateObject private var viewModel = MenuViewModel()
+    init() {
+        UIPageControl.appearance().isHidden = true
+    }
     var body: some View {
         NavigationView{
             TabView {
@@ -17,10 +21,9 @@ struct MenuView: View {
                     CoffeeCardView(coffee: coffee)
                 }
             }
-            .tabViewStyle(.page) // Carousel effect
-            .indexViewStyle(.page(backgroundDisplayMode: .always)) // Dots below the carousel
-            .frame(height: 400) // Adjust the carousel height
-            .navigationTitle("Menu")
+            .tabViewStyle(.page)
+            .frame(height: 500)
+            .navigationTitle("Good Morning!")
         }
     }
 }

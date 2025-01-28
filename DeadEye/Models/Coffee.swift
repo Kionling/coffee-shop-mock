@@ -13,3 +13,12 @@ struct Coffee: Identifiable{
     let description: String
     let price: Double
 }
+
+
+//
+//func performApiCall() async throws -> [Coffee] {
+//    let url = //Future URL link
+//    let (data, _) = try await URLSession.shared.data(from: url)
+//    let wrapper = try JSONDecoder().decode(CoffeeWrapper.self, from: data)
+//    return wrapper.items[0]
+//}

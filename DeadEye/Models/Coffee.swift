@@ -12,6 +12,7 @@ struct Coffee: Identifiable{
     let name: String
     let description: String
     let price: Double
+    var quantity: Int = 1
 }
 
 

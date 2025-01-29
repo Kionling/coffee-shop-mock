@@ -10,9 +10,12 @@ import SwiftUI
 @main
 struct DeadEyeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var cartManager = CartManager()
+    
     var body: some Scene {
         WindowGroup {
             OnOpen()
+                .environmentObject(cartManager)
         }
     }
 }

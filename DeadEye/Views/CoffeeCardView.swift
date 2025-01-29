@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CoffeeCardView: View {
     let coffee: Coffee
-
+    @EnvironmentObject var cartManager: CartManager
     var body: some View {
         ZStack {
             Color.white // Background color for each card
@@ -36,10 +36,20 @@ struct CoffeeCardView: View {
                 
                 Text("$\(coffee.price, specifier: "%.2f")")
                     .font(.headline)
+                
+                Button(action: {
+                    cartManager.addToCart(coffee)
+                }) {
+                    Text("Add to Cart")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
             }
             .padding()
         }
         .frame(width: 300, height: 470) 
     }
 }
-

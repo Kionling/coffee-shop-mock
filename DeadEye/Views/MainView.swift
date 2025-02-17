@@ -1,8 +1,15 @@
 import SwiftUI
 
 struct MainView: View {
-    
+    init() {
+           // Change the background color of the tab bar
+           let appearance = UITabBarAppearance()
+           appearance.configureWithOpaqueBackground()
+           appearance.backgroundColor = UIColor.systemGray6 // Change this to any color you prefer
 
+           UITabBar.appearance().standardAppearance = appearance
+           UITabBar.appearance().scrollEdgeAppearance = appearance
+       }
     var body: some View {
         TabView {
             MenuView()

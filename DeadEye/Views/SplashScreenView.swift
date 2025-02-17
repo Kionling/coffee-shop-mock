@@ -21,11 +21,9 @@ struct ScreenSplashView: View {
                 Image(systemName: "cup.and.saucer.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.brown)
                 Text("DeadEye")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(.brown)
             }
         }
     }

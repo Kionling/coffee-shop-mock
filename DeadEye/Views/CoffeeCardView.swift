@@ -53,3 +53,7 @@ struct CoffeeCardView: View {
         .frame(width: 300, height: 470) 
     }
 }
+
+#Preview {
+    CoffeeCardView(coffee: <#T##Coffee#>, cartManager: <#T##CartManager#>)
+}

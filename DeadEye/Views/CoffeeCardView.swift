@@ -55,5 +55,12 @@ struct CoffeeCardView: View {
 }
 
 #Preview {
-    CoffeeCardView(coffee: <#T##Coffee#>, cartManager: <#T##CartManager#>)
+    let mockData = CartManager()
+    mockData.cartItems = [
+            Coffee(name: "Cappuccino", description: "Rich espresso with steamed milk.", price: 4.99, quantity: 1)
+        ]
+    return CartView()
+        .environmentObject(mockData)
 }
+
+

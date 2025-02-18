@@ -26,7 +26,7 @@ struct MainView: View {
                 }
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.crop.circle")
+                        Label("Profile", systemImage: "person.crop.circle")
                 }
             CartView()
                 .tabItem {

@@ -28,4 +28,11 @@ class CartManager: ObservableObject {
     func totalPrice() -> Double {
         cartItems.reduce(0) { $0 + ($1.price * Double($1.quantity)) }
     }
+    
+    func checkOut() {
+        print("You are now checking out...")
+        if cartItems[Coffee] > 4 {
+            print("You've exceeeded quantity. ")
+        }
+    }
 }
